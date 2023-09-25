@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
 
 VERSION = "0.0.1"
-DESCRIPTION = "Python package for preprocessing and analyzing wearable device data"
+DESCRIPTION = "Python package for preprocessing and \
+              analyzing wearable device data"
 
 setup(
     name="dbdpy",

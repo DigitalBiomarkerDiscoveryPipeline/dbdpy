@@ -4,7 +4,18 @@ class CommercialDevice:
         self.model = model
 
     def get_device_info(self):
-        return f"{self.brand} - {self.model}"
+        """Retrieve brand and model name of a device.
+
+        Paramters
+        ---------
+        None
+
+        Returns
+        -------
+        device_info : str
+        """
+        device_info = f"{self.brand} - {self.model}"
+        return device_info
 
     # def calculate_rescale_value(self, age, is_damaged):
     #     initial_value = 1000
