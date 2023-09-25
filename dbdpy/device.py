@@ -17,11 +17,26 @@ class CommercialDevice:
         device_info = f"{self.brand} - {self.model}"
         return device_info
 
-    # def calculate_rescale_value(self, age, is_damaged):
-    #     initial_value = 1000
-    #     depre_rate = 0.20 if self.brand == "Apple" else 0.15
-    #     rescale_value = initial_value * ((1 - depre_rate) ** age)
-    #     if is_damaged:
-    #         rescale_value *= 0.70
+    def calculate_rescale_value(self, age, is_damaged):
+        """Short descreption
 
-    #     return round(rescale_value, 2)
+        Long description
+
+        Parameters
+        ----------
+        age : int
+            Description for parameter
+        is_damaged : bool
+            Description
+
+        Return
+        ------
+
+        """
+        initial_value = 1000
+        depre_rate = 0.20 if self.brand == "Apple" else 0.15
+        rescale_value = initial_value * ((1 - depre_rate) ** age)
+        if is_damaged:
+            rescale_value *= 0.70
+
+        return round(rescale_value, 2)
