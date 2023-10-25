@@ -2,3 +2,9 @@ pytest
 pytest-pycodestyle
 pytest-black
 black
+
+datetime
+pandas
+numpy
+matplotlib
+garmin_fit_sdk
