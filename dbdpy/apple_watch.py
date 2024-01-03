@@ -2,6 +2,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 from dbdpy.commercial_device import CommercialDevice
+from dbdpy.apple_watch import AppleWatch
 
 
 class AppleWatch(CommercialDevice):
@@ -25,7 +26,7 @@ class AppleWatch(CommercialDevice):
         self.respiration_rate = respiration_rate
     
     @classmethod
-    def read_file(cls, filepath: str):
+    def read_file(cls, filepath: str) -> AppleWatch:
         # Extract data from XML file and put into dataframe
         tree = ET.parse(filepath)
         root = tree.getroot()
