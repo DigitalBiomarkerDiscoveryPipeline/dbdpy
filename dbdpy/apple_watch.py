@@ -24,6 +24,41 @@ class AppleWatch(CommercialDevice):
     
     @classmethod
     def read_file(cls, filepath: str, device_name: str="Apple Watch"):
+        """
+        Reads health data from an XML file specific to an Apple Watch and initializes 
+        an instance of the `AppleWatch` class with this data.
+
+        This method parses the XML file to extract various health metrics such as 
+        energy burned, step count, distance walked or run, oxygen saturation, and heart rate. 
+        It then filters and formats the data before initializing an `AppleWatch` object with 
+        the extracted information.
+
+        Parameters
+        ----------
+        filepath : str
+            The path to the XML file containing the Apple Watch health data.
+        device_name : str, optional
+            The name of the device as it appears in the data source, by default "Apple Watch".
+
+        Returns
+        -------
+        AppleWatch
+            An instance of the `AppleWatch` class, initialized with health data extracted 
+            from the XML file.
+
+        Notes
+        -----
+        - The method assumes that the XML file is structured in a specific format compatible 
+          with Apple Watch data.
+        - Health data is extracted based on predefined health metric types and may not include 
+          all data present in the XML file.
+        - The device name is used to filter out data from sources other than the specified 
+          Apple Watch.
+
+        Examples
+        --------
+        >>> apple_watch_data = AppleWatch.read_file("path/to/apple_watch_data.xml")
+        """
         # TODO: Deidentify device name
         # TODO: Store device model information
         # Extract data from XML file and put into dataframe
