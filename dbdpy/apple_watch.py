@@ -90,11 +90,6 @@ class AppleWatch(CommercialDevice):
             .drop(columns="type")
             .rename(columns={"value": "active_calories"})
         )
-        steps = (
-            record_df[record_df["type"] == "StepCount"]
-            .drop(columns="type")
-            .rename(columns={"value": "steps"})
-        )
         distance = (
             record_df[record_df["type"] == "DistanceWalkingRunning"]
             .drop(columns="type")
@@ -110,12 +105,9 @@ class AppleWatch(CommercialDevice):
             .drop(columns="type")
             .rename(columns={"value": "heart_rate"})
         )
-        sleep = record_df[record_df["type"] == "SleepAnalysis"].drop(columns="type")
 
         return cls(
-            sleep=sleep,
             energy=energy,
-            steps=steps,
             distance=distance,
             oxygen=oxygen,
             heart_rate=heart_rate,
