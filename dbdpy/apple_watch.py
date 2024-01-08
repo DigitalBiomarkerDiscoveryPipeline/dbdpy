@@ -11,7 +11,7 @@ class AppleWatch(CommercialDevice):
         super().__init__(**kwargs)
 
     @classmethod
-    def read_file(cls, filepath: str, device_name: str = "Apple Watch"):
+    def read_file(cls, filepath: str, device_brand: str="Apple Watch"):
         """
         Reads health data from an XML file specific to an Apple Watch and
         initializes an instance of the `AppleWatch` class with this data.
@@ -50,7 +50,7 @@ class AppleWatch(CommercialDevice):
         >>> apple_watch_data = AppleWatch.read_file("path/to/apple_watch_data.xml")
         """
         # TODO: Deidentify device name
-        # TODO: Store device model information
+        # TODO: Store device brand and model information
         # Extract data from XML file and put into dataframe
         tree = ET.parse(filepath)
         root = tree.getroot()
