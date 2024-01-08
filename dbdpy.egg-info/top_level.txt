@@ -1,2 +1,0 @@
-dbdpy
-tests

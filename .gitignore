@@ -1,2 +1,4 @@
-dbdpy-dev
+dbdpy-env
+dbdpy.egg-info
 data
+build
