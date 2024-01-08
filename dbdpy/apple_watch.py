@@ -61,7 +61,7 @@ class AppleWatch(CommercialDevice):
         record_df["sourceName"] = record_df["sourceName"].apply(
             lambda x: unicodedata.normalize("NFKC", x)
         )
-        record_df = record_df[record_df["sourceName"].str.contains(device_name)]
+        record_df = record_df[record_df["sourceName"].str.contains(device_brand)]
 
         # Drop columns that will not be used
         drop_cols = ["sourceName", "sourceVersion", "unit", "creationDate", "device"]
